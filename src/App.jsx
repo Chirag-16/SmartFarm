@@ -11,7 +11,7 @@ import Marketplace from './components/Marketplace';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import SignUp from './pages/SignUp';
+import SignUp from './pages/Signup';
 import Signin from './pages/Signin';
 
 const PrivateRoute = ({ children }) => {
