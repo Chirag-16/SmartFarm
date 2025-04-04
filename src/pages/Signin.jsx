@@ -125,7 +125,7 @@ const Login = () => {
             <motion.div variants={itemVariants} className="mb-6">
               <label className="block text-gray-700 text-sm font-medium mb-2">I am a</label>
               <div className="grid grid-cols-3 gap-3">
-                {['Farmer', 'Admin', 'Collector'].map((option) => (
+                {['Farmer', 'Collector'].map((option) => (
                   <motion.button
                     key={option}
                     type="button"
@@ -138,7 +138,7 @@ const Login = () => {
                     }`}
                     onClick={() => setCredentials({ ...credentials, role: option.toLowerCase() })}
                   >
-                    {option === 'Collector' ? 'Collector/User' : option}
+                    {option === 'Collector' ? 'User' : option}
                   </motion.button>
                 ))}
               </div>
