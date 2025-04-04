@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartfarm-app
+  labels:
+    app: smartfarm-app
+spec:
+  replicas: 2  # Increased replicas for high availability
+  selector:
+    matchLabels:
+      app: smartfarm-app
+  template:
+    metadata:
+      labels:
+        app: smartfarm-app
+    spec:
+      containers:
+      - name: smartfarm-app
+        image: chiragjp512669/smartfarm:latest  # Updated with your DockerHub image
+        ports:
+        - containerPort: 3000
