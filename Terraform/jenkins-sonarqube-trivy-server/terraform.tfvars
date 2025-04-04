@@ -1,0 +1,5 @@
+vpc_id        = "YOUR-VPC-ID"
+instance_type = "t2.large"
+ami           = "YOUR-AMI"
+key_pair      = "jenkins-server-key"
+subnet_id     = "YOUR-SUBNET-ID"
