@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - sqlite_data:/data
+    environment:
+      - DATABASE_URL=sqlite:////data/sql_app.db
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
+    name: farm_waste_sqlite_data 

@@ -13,6 +13,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import SignUp from './pages/Signup';
 import Signin from './pages/Signin';
+import TestConnection from './components/TestConnection';
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/test" element={<TestConnection />} />
           <Route
             path="/admin"
             element={
@@ -59,7 +61,7 @@ function App() {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path="/collector"
             element={
               <PrivateRoute>
@@ -70,31 +72,31 @@ function App() {
           <Route
             path="/about"
             element={
-                <About /> 
+              <About />
             }
           />
           <Route
             path="/services"
             element={
-                <Services /> 
+              <Services />
             }
           />
           <Route
             path="/signin"
             element={
-                <Signin /> 
+              <Signin />
             }
           />
           <Route
             path="/SignUp"
             element={
-                <SignUp /> 
+              <SignUp />
             }
           />
           <Route
             path="/contact"
             element={
-                <Contact /> 
+              <Contact />
             }
           />
         </Routes>
